@@ -26,17 +26,18 @@ input.onButtonPressed(Button.AB, function () {
     }
 })
 input.onButtonPressed(Button.B, function () {
-    for (let index = 0; index <= 255; index++) {
-        led.plotBrightness(2, 2, index)
+    for (let index3 = 0; index3 <= 255; index3++) {
+        led.plotBrightness(2, 2, index3)
         basic.pause(3)
     }
     basic.pause(1000)
-    for (let index = 0; index <= 255; index++) {
-        led.plotBrightness(2, 2, 255 - index)
+    for (let index3 = 0; index3 <= 255; index3++) {
+        led.plotBrightness(2, 2, 255 - index3)
         basic.pause(3)
     }
 })
-music.playTone(988, music.beat(BeatFraction.Whole))
+led.setDisplayMode(DisplayMode.Greyscale)
+music.playTone(988, music.beat(BeatFraction.Eighth))
 let maximumbrightness = 124
 let pausesbetweensteps = 5
 basic.forever(function () {
